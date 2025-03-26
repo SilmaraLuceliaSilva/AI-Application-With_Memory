@@ -45,11 +45,12 @@ response = with_message_history.invoke (
     config=config
 )
 
-# Exemplo 21 ----------------------------------------------------------
+# Exemplo 2 ----------------------------------------------------------
 
 # Criação de um prompt template para estruturar a entrada do modelo
 prompt = ChatPromptTemplate.from_messages(
-     [("system", "Você é um assistente útil. Responda todas as perguntas com precisão no idioma ."), MessagesPlaceholder(variable_name="messages")  # Permite adicionar mensagens dinamicamente
+     [("system", "Você é um assistente útil. Responda todas as perguntas com precisão no idioma ."), 
+      MessagesPlaceholder(variable_name="messages")  # Permite adicionar mensagens dinamicamente
     ])
 
 # Conecta o modelo ao template de prompt
